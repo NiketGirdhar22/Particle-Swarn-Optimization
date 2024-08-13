@@ -62,13 +62,10 @@ def pso_tsp(distance_matrix, num_particles=30, max_iterations=1000):
 
     return g_best, g_best_distance
 
-# Example usage
-if __name__ == "__main__":
-    # Create a random distance matrix for 5 cities
-    num_cities = 5
-    random_matrix = np.random.rand(num_cities, num_cities)
-    distance_matrix = 20 + random_matrix * (150 - 20)
-    print(distance_matrix)
-    best_tour, best_distance = pso_tsp(distance_matrix, num_particles=30, max_iterations=100)
-    print(f"Best Tour: {best_tour}")
-    print(f"Best Distance: {best_distance}")
+num_cities = 5
+random_matrix = np.random.rand(num_cities, num_cities)
+distance_matrix = 20 + random_matrix * (150 - 20)
+print(distance_matrix)
+best_tour, best_distance = pso_tsp(distance_matrix, num_particles=30, max_iterations=100)
+print(f"Best Tour: {best_tour}")
+print(f"Best Distance: {best_distance}")
